@@ -174,3 +174,126 @@ document.getElementById("scheduleList").innerHTML=result;
 
 
 }
+// =====================
+// BETTER AI ANSWER
+// =====================
+
+
+function askAI(){
+
+let question =
+document.getElementById("question").value.toLowerCase();
+
+
+let answer="";
+
+
+if(question.includes("math")){
+
+answer="🤖 Maths tip: Understand concepts first, then practice problems.";
+
+}
+
+else if(question.includes("science")){
+
+answer="🤖 Science tip: Learn concepts with examples and diagrams.";
+
+}
+
+else if(question.includes("history")){
+
+answer="🤖 History tip: Remember events using timelines.";
+
+}
+
+else{
+
+answer="🤖 I will help you learn about "+question+". Keep practising!";
+
+}
+
+
+document.getElementById("answer").innerHTML=answer;
+
+
+}
+
+
+
+// =====================
+// QUIZ GENERATOR
+// =====================
+
+
+function generateQuiz(){
+
+
+let quizzes=[
+
+"Math: What is 5 × 5?",
+
+"Science: What planet is called the Red Planet?",
+
+"English: What is a noun?",
+
+"Computer: What is HTML used for?"
+
+];
+
+
+let random =
+
+quizzes[Math.floor(Math.random()*quizzes.length)];
+
+
+document.getElementById("quiz").innerHTML=
+
+"🧠 "+random;
+
+
+}
+
+
+
+// =====================
+// DARK MODE
+// =====================
+
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+
+
+// =====================
+// SAVE NOTES
+// =====================
+
+
+let notesBox =
+document.getElementById("notes");
+
+
+notesBox.addEventListener("input",function(){
+
+localStorage.setItem(
+"notes",
+notesBox.value
+);
+
+});
+
+
+
+let savedNotes =
+localStorage.getItem("notes");
+
+
+if(savedNotes){
+
+notesBox.value=savedNotes;
+
+}
