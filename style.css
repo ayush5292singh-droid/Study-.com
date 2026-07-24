@@ -122,3 +122,26 @@ border-radius:12px;
 font-size:17px;
 
 }
+.dark{
+
+background:#111827;
+
+}
+
+
+.dark .app{
+
+background:#1f2937;
+
+color:white;
+
+}
+
+
+.dark .card{
+
+background:#374151;
+
+color:white;
+
+}
